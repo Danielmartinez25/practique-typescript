@@ -29,4 +29,24 @@ enum ContractStatus {
 }
 
 let employeeStatus: ContractStatus = ContractStatus.Temp;
-console.log(employeeStatus);
+console.log(employeeStatus) 
+/* Any type */
+
+let randomValue: any = 10;
+randomValue = 'Mateo';   // OK
+randomValue = true;      // OK
+
+/* Unknow */
+
+let randomValues: unknown = 10;
+randomValues = true;
+randomValues = 'Mateo';
+
+console.log(randomValues.name);  // Error: Object is of type unknown
+randomValues();                  // Error: Object is of type unknown
+randomValues.toUpperCase();      // Error: Object is of type unknown
+
+
+/* 
+La principal diferencia entre anyy unknownes que no puede interactuar con una variable de tipo unknown; hacerlo genera un error de compilación . anyomite cualquier verificación en tiempo de compilación y el objeto se evalúa en tiempo de ejecución; si el método o la propiedad existe, se comportará como se esperaba.
+*/
