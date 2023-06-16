@@ -18,8 +18,8 @@ let s: string;
 let empty = "";
 let abc = 'abc';
 /* use of `` */
-let firstName: string = "Mateo";
-let sentence: string = `My name is ${firstName}.I am new to TypeScript.`;
+let secondName: string = "Mateo";
+let sentence: string = `My name is ${secondName}.I am new to TypeScript.`;
 console.log(sentence);
 /* Enum */
 enum ContractStatus {
@@ -111,7 +111,9 @@ let diceRoll: dice;
 diceRoll = 1;    //* Valid
 diceRoll = 2;    //* Valid
 diceRoll = 7;    //* Invalid
-
+/* Array */
+let list: number[] = [1, 2, 3];
+let list2 : Array<number> = [1,2,3]
 /* Generics */
 function Generics<T>(n : T ) {
     if(typeof n === "number"){
