@@ -153,3 +153,20 @@ function printName(obj: { first: string; last?: string }) {
 // Both OK
 printName({ first: "Bob" });
 printName({ first: "Alice", last: "Alisson" });
+
+
+/* Types literal */
+function compare(a: string, b: string): -1 | 0 | 1 {
+    return a === b ? 0 : a > b ? 1 : -1;
+}
+
+interface Options {
+    width: number;
+}
+function configure(x: Options | "auto") {
+    // ...
+}
+configure({ width: 100 });
+configure("auto");
+configure("automatic");
+

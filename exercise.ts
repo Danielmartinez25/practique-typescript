@@ -67,4 +67,4 @@ function whichMonths() {
     return monthsInSeason;
 }
 
-console.log(whichMonths("Fall"));
+console.log(whichMonths("Fall"))
